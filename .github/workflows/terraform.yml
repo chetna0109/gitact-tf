@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  terraform:
+ terraform:
     name: terraform
     env:
       AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
