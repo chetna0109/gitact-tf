@@ -1,17 +1,16 @@
 name: terraform
 on:
-  push:
-   branches: [main]
-
+ push:
+   branches:
+     - main
 jobs:
-  terraform:
-    name: 'Terraform'
-    env:
-      AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
-      AWS_SECRET_ACCESS_KEY_ID: ${{secrets.SECRET_ACCESS_KEY}}
-    runs-on: ubuntu-latest
-    environment: production
-
+ terraform:
+   name: Terraform
+   env:
+     AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
+     AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+   runs-on: ubuntu-latest
+   environment: production
     steps:
     - name: Checkout
       uses: actions/checkout@v3
