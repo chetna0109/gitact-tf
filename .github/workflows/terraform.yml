@@ -11,7 +11,14 @@ jobs:
      AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
    runs-on: ubuntu-latest
    environment: production
-   steps:
+   environment: production
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -27,3 +34,5 @@ jobs:
        tf_actions_version: 0.14.3
       run: terraform plan
 
+
+   
