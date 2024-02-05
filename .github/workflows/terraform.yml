@@ -3,15 +3,15 @@ name: 'Terraform'
   push :
    branches: [main]
 
- jobs:
- terraform :
+jobs:
+  terraform :
    name: 'Terraform'
    env:
     AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
     AWS_SECRET_ACCESS_KEY_ID: ${{secrets.SECRET_ACCESS_KEY}}
    runs-on : ubuntu-latest
    environment: production
-     steps:
+   steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
