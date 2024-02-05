@@ -6,10 +6,10 @@ on:
 
 jobs:
   terraform :
-   name: terraform
+    name: terraform
     env:
-     AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
-     AWS_SECRET_ACCESS_KEY_ID: ${{secrets.SECRET_ACCESS_KEY}}
+      AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
+      AWS_SECRET_ACCESS_KEY_ID: ${{secrets.SECRET_ACCESS_KEY}}
     runs-on : ubuntu-latest
     environment: production
     steps:
