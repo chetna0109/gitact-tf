@@ -1,11 +1,10 @@
 name: 'Terraform'
-
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  terraform:
+   terraform:
     name: 'Terraform'
     env:
      AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
