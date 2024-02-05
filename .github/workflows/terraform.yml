@@ -4,14 +4,13 @@ on:
    branches:
      - main
 jobs:
- terraform:
-   name: Terraform
-   env:
+  terraform:
+    name: 'Terraform'
+    env:
      AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
      AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
-   runs-on: ubuntu-latest
-   environment: production
-   environment: production
+    runs-on: ubuntu-latest
+    environment: production
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
