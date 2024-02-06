@@ -6,7 +6,7 @@ variable "instance_type"{
     description="ami_tyoe"
 
 }
-variable "region"{
+/*variable "region"{
      description="ami region"
 
 }
