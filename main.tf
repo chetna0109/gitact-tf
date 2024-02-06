@@ -15,13 +15,13 @@
 }*/
 
 provider "aws"{
-     region = "ap-south-1"
+     region = var.region
 }
 resource "aws_instance" "web" {
-  ami           = "ami-03f4878755434977f"
-  instance_type = "t2.micro"
+  ami           = var.ami_value
+  instance_type = var.instance_type
  
   tags = {
-    Name = "HelloWorld28"
+    Name = "HelloWorld281"
   }
 }
