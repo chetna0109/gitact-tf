@@ -15,7 +15,7 @@
 }*/
 
 provider "aws"{
-     region = var.region
+     region = "ap-south-1"
 }
 resource "aws_instance" "web" {
   ami           = var.ami_value
