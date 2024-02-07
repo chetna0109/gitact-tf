@@ -3,6 +3,6 @@ variable "ami_value"{
 }
 
 variable "instance_type"{
-    description="ami_tyoe"
+    description="ami_type"
 
 }
